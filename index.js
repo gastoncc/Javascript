@@ -3,8 +3,6 @@ function saludar() {
   alert("Primera Preentrega");
 }
 
-saludar()
-
 let nombre = prompt("Ingrese su nombre:");
 let apellido = prompt("Ingrese su apellido:");
 alert("Holaaaa! " + nombre + " " + apellido);
