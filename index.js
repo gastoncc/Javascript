@@ -3,6 +3,13 @@ function saludar() {
   alert("Primera Preentrega");
 }
 
+function sumar(a, b) {
+  return a + b;
+}
+let resultado = sumar(3, 5);
+console.log(resultado); 
+
+
 let nombre = prompt("Ingrese su nombre:");
 let apellido = prompt("Ingrese su apellido:");
 alert("Holaaaa! " + nombre + " " + apellido);
