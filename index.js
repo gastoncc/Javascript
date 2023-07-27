@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 122477f1d4933f64cbc54e43405a85e286bff974
 function saludar() {
   alert("Primera Preentrega");
 }
@@ -7,6 +11,10 @@ function sumar(a, b) {
 }
 let resultado = sumar(3, 5);
 console.log(resultado); 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 122477f1d4933f64cbc54e43405a85e286bff974
 
 let nombre = prompt("Ingrese su nombre:");
 let apellido = prompt("Ingrese su apellido:");
@@ -36,6 +44,10 @@ while (contraseña !== contraseñaCorrecta || correo !== correoCorrecto) {
 alert("Inicio de sesión exitoso. Bienvenido " + correo + "!");
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 122477f1d4933f64cbc54e43405a85e286bff974
 let dia = prompt("Ingrese un día de la semana")
 switch (dia) {
   case "lunes":
@@ -64,6 +76,7 @@ switch (dia) {
   default:
     alert("No se reconoce ese día de la semana");
 }
+<<<<<<< HEAD
 
 
 let numeros = [10, 25, 30, 45, 50];
@@ -104,3 +117,5 @@ while (true) {
 }
 console.log("Datos ingresados:");
 console.log(personas);
+=======
+>>>>>>> 122477f1d4933f64cbc54e43405a85e286bff974
