@@ -66,5 +66,41 @@ switch (dia) {
 }
 
 
+let numeros = [10, 25, 30, 45, 50];
+let numerosMayores30 = numeros.filter(function(numero) {
+  return numero > 30;
+});
+console.log(numerosMayores30);
+
+let numeroBuscado = numeros.find(function(numero) {
+  return numero === 25;
+});
+console.log(numeroBuscado);
+
+let incluyeNumero30 = numeros.includes(30);
+console.log(incluyeNumero30);
+
+let indiceNumero45 = numeros.indexOf(45);
+console.log(indiceNumero45);
 
 
+let personas = [];
+
+while (true) {
+  let nombre = prompt("Ingrese el nombre o 'termine' para terminar):");
+  if (nombre.toLowerCase() === "termine") {
+    break;
+  }
+  let correo = prompt("Ingrese el correo electrónico:");
+  let dni = prompt("Ingrese el DNI:");
+  let fechaNacimiento = prompt("Ingrese la fecha de nacimiento (dd/mm/aaaa):");
+  let persona = {
+    nombre: nombre,
+    correo: correo,
+    dni: dni,
+    fechaNacimiento: fechaNacimiento
+  };
+  personas.push(persona);
+}
+console.log("Datos ingresados:");
+console.log(personas);
