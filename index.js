@@ -1,4 +1,12 @@
-alert("Primera preentrega")
+function saludar() {
+  alert("Primera Preentrega");
+}
+
+function sumar(a, b) {
+  return a + b;
+}
+let resultado = sumar(3, 5);
+console.log(resultado); 
 
 let nombre = prompt("Ingrese su nombre:");
 let apellido = prompt("Ingrese su apellido:");
@@ -10,13 +18,13 @@ let edad = prompt("Ingrese su edad:");
 alert(nombr + " tiene " + edad + " años.");
 
 
-let resultado = 233 + 356 + 478;
+let resultados = 233 + 356 + 478;
 alert("El resultado es: " + resultado);
 
 
 
-let contraseñaCorrecta = "12345";
-let correoCorrecto = "56789";
+const contraseñaCorrecta = "12345";
+const correoCorrecto = "56789";
 let contraseña = prompt("Ingrese su contraseña:");
 let correo = prompt("Ingrese su correo electrónico:");
 while (contraseña !== contraseñaCorrecta || correo !== correoCorrecto) {
@@ -28,30 +36,34 @@ while (contraseña !== contraseñaCorrecta || correo !== correoCorrecto) {
 alert("Inicio de sesión exitoso. Bienvenido " + correo + "!");
 
 
-while (true) {
-    let dia = prompt("Ingrese el día");
-    if (dia === "lunes") {
-      alert("lunes");
-      break;
-    } else if (dia === "martes") {
-      alert("Es martes");
-      break;
-    } else if (dia === "miercoles") {
-      alert("Es miercoles");
-      break;
-    } else if (dia === "jueves") {
-      alert("Es jueves");
-      break;
-    } else if (dia === "viernes") {
-      alert("Es viernes");
-      break;
-    } else if (dia === "sabado") {
-      alert("Es fin de semana");
-      break;
-    } else if (dia === "domingo") 
-    {alert("Es fin de semana") }
+let dia = prompt("Ingrese un día de la semana")
+switch (dia) {
+  case "lunes":
+    alert("Hoy es lunes");
+    break;
+  case "martes":
+    alert("Hoy es martes");
+    break;
+  case "miércoles":
+  case "miercoles": 
+    alert("Hoy es miércoles");
+    break;
+  case "jueves":
+    alert("Hoy es jueves");
+    break;
+  case "viernes":
+    alert("Hoy es viernes");
+    break;
+  case "sábado":
+  case "sabado":
+    alert("Hoy es sábado");
+    break;
+  case "domingo":
+    alert("Hoy es domingo");
+    break;
+  default:
+    alert("No se reconoce ese día de la semana");
 }
-
 
 
 
