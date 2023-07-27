@@ -100,7 +100,7 @@ while (true) {
     dni: dni,
     fechaNacimiento: fechaNacimiento
   };
-  personas.push(persona);
+  persona.push(persona);
 }
 console.log("Datos ingresados:");
 console.log(persona);
