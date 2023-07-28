@@ -84,8 +84,7 @@ let indiceNumero45 = numeros.indexOf(45);
 console.log(indiceNumero45);
 
 
-let persona = [];
-
+let usuario = [];
 while (true) {
   let nombre = prompt("Ingrese el nombre o 'termine' para terminar):");
   if (nombre.toLowerCase() === "termine") {
@@ -100,7 +99,7 @@ while (true) {
     dni: dni,
     fechaNacimiento: fechaNacimiento
   };
-  persona.push(persona);
+  usuario.push(persona);
 }
 console.log("Datos ingresados:");
-console.log(persona);
+console.log(usuario);
