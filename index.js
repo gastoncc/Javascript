@@ -44,3 +44,8 @@ const productosArray = [
 const productosList = document.createElement("ul");
 document.querySelector(".card-body").appendChild(productosList);
 
+productosArray.forEach((producto) => {
+  const productoItem = document.createElement("li");
+  productoItem.textContent = `${producto.nombre}: $${producto.precio}`;
+  productosList.appendChild(productoItem);
+});
