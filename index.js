@@ -1,37 +1,51 @@
 
-// Almacenar el objeto JSON en el Storage como una cadena
-var servicio = {
-    nombre: "ESMALTADO SEMIPERMANENTE",
-    descripcion: "El semipermanente es un sistema de duración corta...",
-    precio: 15
+// Objeto JSON para almacenar información del producto
+const producto = {
+  nombre: "ESMALTADO SEMIPERMANENTE",
+  descripcion: "El semipermanente es un sistema de duración corta...",
+  precio: 10.99,
 };
-localStorage.setItem("servicioJSON", JSON.stringify(servicio));
 
-// Función para mostrar el servicio en el DOM
-function mostrarServicio() {
-    var servicioJSON = localStorage.getItem("servicioJSON");
-    var servicioObjeto = JSON.parse(servicioJSON);
-    
-    var card = document.querySelector(".card");
+// Almacenar el objeto JSON en el Local Storage
+localStorage.setItem("producto", JSON.stringify(producto));
 
-    var titulo = card.querySelector(".card-title");
-    titulo.textContent = servicioObjeto.nombre;
+// Modificar el DOM para mostrar el precio del producto
+const precioParrafo = document.createElement("p");
+precioParrafo.textContent = `Precio: $${producto.precio}`;
+document.querySelector(".card-body").appendChild(precioParrafo);
 
-    var descripcion = card.querySelector(".card-text");
-    descripcion.innerHTML = servicioObjeto.descripcion;
+// Detección de eventos de usuario
+document.getElementById("pedidoBtn").addEventListener("click", () => {
+  alert("¡Pedido realizado!");
+});
 
-    var precio = document.createElement("p");
-    precio.textContent = "Precio: $" + servicioObjeto.precio;
-
-    card.querySelector(".card-body").appendChild(precio);
+// Bloque condicional para cambiar el color del precio según el precio
+if (producto.precio > 15) {
+  precioParrafo.style.color = "red";
+} else {
+  precioParrafo.style.color = "green";
 }
 
-// Agregar evento al cargar la página
-document.addEventListener("DOMContentLoaded", function() {
-    mostrarServicio();
+let stockDisponible = true;
+if (stockDisponible) {
+  alert("El producto está disponible en stock.");
+} else {
+  alert("El producto no está disponible en stock.");
+}
 
-    var pedirBtn = document.querySelector(".btn.btn-primary");
-    pedirBtn.addEventListener("click", function() {
-        alert("Pedido realizado. ¡Gracias!");
-    });
+// Array de productos
+const productosArray = [
+  { nombre: "Producto A", precio: 8.99 },
+  { nombre: "Producto B", precio: 12.49 },
+  { nombre: "Producto C", precio: 15.99 },
+];
+
+// Mostrar información de productos en el DOM
+const productosList = document.createElement("ul");
+document.querySelector(".card-body").appendChild(productosList);
+
+productosArray.forEach((producto) => {
+  const productoItem = document.createElement("li");
+  productoItem.textContent = `${producto.nombre}: $${producto.precio}`;
+  productosList.appendChild(productoItem);
 });
