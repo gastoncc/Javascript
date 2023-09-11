@@ -62,7 +62,7 @@ function entregaFinal() {
    });
 
    // Promesas con Fetch: Cargar datos desde archivo JSON local
-   fetch("ruta/al/archivo.json")
+   fetch("")
        .then(response => response.json())
        .then(data => {
            // Procesar los datos obtenidos
