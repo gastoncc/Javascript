@@ -63,22 +63,16 @@ function entregaFinal() {
       alert("¡Pedido realizado con jQuery!"); 
     }); 
   
-    // Promesas con Fetch: Cargar datos desde archivo JSON local 
-    fetch('./datos.json')
-    .then(response => response.json())
+    fetch('datos.json')
+    .then(response => response.json()) 
     .then(data => {
-        // Actualiza los elementos HTML con los datos del archivo JSON
-        const cardTitle = document.querySelector('.card-title');
-        const cardText = document.querySelector('.card-text');
-        const cardImage = document.querySelector('.card-img-top');
-
-        cardTitle.textContent = data.titulo;
-        cardText.textContent = data.descripcion;
-        cardImage.src = data.imagen;
-        cardImage.alt = "esmaltado semipermanente"; 
+        // Accedemos a los datos y los mostramos en la página
+        document.getElementById('titulo').textContent = data.titulo;
+        document.getElementById('descripcion').textContent = data.descripcion;
+        document.getElementById('imagen').src = data.imagen;
     })
-    .then(error => {
-        console.error('Error al cargar datos:', error);
+    .catch(error => {
+        console.error('Error al cargar el archivo JSON:', error);
     });
 
 }
